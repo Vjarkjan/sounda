@@ -1,0 +1,18 @@
+diff --git a/src/dma.h b/src/dma.h
+index f5a8112..4352a1d 100644
+--- a/src/dma.h
++++ b/src/dma.h
+@@ -16,6 +16,13 @@ public:
+     void Reset();
+ 
+     void EnableChannel(u16 value) {
++        // DSi DMA starts on the channel enable edge. Match melonDS 1.1's
++        // upstream Teakra integration; the existing SetZ trigger is for 3DS.
++        u16 newly_enabled = value & ~enable_channel;
++        for (unsigned i = 0; i < channels.size(); ++i) {
++            if (newly_enabled & (1 << i))
++                DoDma(i);
++        }
+         enable_channel = value;
+     }
+     u16 GetChannelEnabled() const {

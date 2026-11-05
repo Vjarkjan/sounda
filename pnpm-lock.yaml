@@ -1,0 +1,43 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      mpx:
+        specifier: ^1.0.3
+        version: 1.0.3
+      npx:
+        specifier: ^10.2.2
+        version: 10.2.2
+
+packages:
+
+  mobx@3.6.2:
+    resolution: {integrity: sha512-Dq3boJFLpZEvuh5a/MbHLUIyN9XobKWIb0dBfkNOJffNkE3vtuY0C9kSDVpfH8BB0BPkVw8g22qCv7d05LEhKg==}
+
+  mpx@1.0.3:
+    resolution: {integrity: sha512-eaqCUEKv/QqxjMXNGZjT+Ji57E/5xrUwJi7vyBH9/8HiQcAku/t8Oe1fhAhbXRSvtmypHCFhnDYt0B7rHdytFw==}
+    deprecated: rename
+
+  npx@10.2.2:
+    resolution: {integrity: sha512-eImmySusyeWphzs5iNh791XbZnZG0FSNvM4KSah34pdQQIDsdTDhIwg1sjN3AIVcjGLpbQ/YcfqHPshKZQK1fA==}
+    deprecated: This package is now part of the npm CLI.
+    hasBin: true
+    bundledDependencies:
+      - npm
+      - libnpx
+
+snapshots:
+
+  mobx@3.6.2: {}
+
+  mpx@1.0.3:
+    dependencies:
+      mobx: 3.6.2
+
+  npx@10.2.2: {}

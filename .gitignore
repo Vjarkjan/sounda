@@ -1,0 +1,9 @@
+/target/
+/output/
+/dist/
+/node_modules/
+__pycache__/
+*.py[cod]
+*.a
+*.app
+*.szs
